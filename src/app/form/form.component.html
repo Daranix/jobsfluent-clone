@@ -1,3 +1,26 @@
-<p>
-  form works!
-</p>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="nombre">Nombbre</label>
+    <input type="text" id="nombre" name="nombre" formControlName="nombre">
+  </div>
+  <div>
+    <label for="ciudad">Ciudad</label>
+    <input type="text" id="ciudad" name="descripcion" formControlName="ciudad">
+  </div>
+  <div>
+    <label for="descripcion">Descripcion</label>
+    <input type="text" id="descripcion" name="descripcion" formControlName="descripcion">
+  </div>
+  
+  <div>
+    <label for="imagen">Imagen</label>
+    <input type="url" id="imagen" name="imagen" formControlName="imgUrl">
+  </div>
+  
+  <div>
+    <label for="salario">Salario</label>
+    <input type="number" id="salario" name="salario" formControlName="salario">
+  </div>
+
+  <button type="submit" [disabled]="formulario.invalid">Guardar</button>
+</form>

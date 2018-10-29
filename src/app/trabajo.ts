@@ -1,6 +1,6 @@
 // ng g cl
 export class Trabajo {
-    constructor(public id: number,
+    constructor(public id: string,
         public nombre: string,
         public descripcion: string,
         public imgUrl: string,

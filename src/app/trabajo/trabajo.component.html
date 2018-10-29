@@ -1,3 +1,8 @@
-<p>
-  trabajo works!
-</p>
+<div>
+  <img [src]="trabajo.imgUrl">
+  <h3>{{ trabajo.nombre }}</h3>
+  <p>Salario: {{ trabajo.salario | currency: 'EUR' }}</p>
+  <div>
+    <span *ngFor="let skill of trabajo.skills">{{ skill }}</span>
+  </div>
+</div>

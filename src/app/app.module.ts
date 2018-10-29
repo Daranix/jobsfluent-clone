@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListaTrabajosComponent } from './lista-trabajos/lista-trabajos.component';
@@ -24,7 +25,8 @@ import { routing } from './app.routing';
   imports: [
     BrowserModule,
     HttpClientModule,
-    routing
+    routing,
+    ReactiveFormsModule
   ],
   providers: [
     TrabajosService
